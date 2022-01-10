@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無題ドキュメント</title>
+</head>
+
+<body>
+<h3 class="box_header">シンプルボックス+α</h3>
+<div class="box">
+  <div class="inner">
+    ２つの角に背景として三角形を入れてみました。
+    三角形の大きさをいろいろ変えてみるのも良いと思います。
+  </div>
+</div>
+
+<style>
+.box{
+  border: 2px solid #0094D6;
+  position: relative;
+  min-height: 4em;
+	padding:1em 2em 1em 1em;
+}
+h3.box_header{
+  color: #0071a3;
+  margin: 0;
+  text-align: center;
+}
+.box .inner{
+  padding: 1.0em;
+  position: relative;
+  z-index: 1;
+}
+.box::before,
+.box::after{
+  content: "";
+  width: 4em;
+  height: 4em;
+  position: absolute;
+}
+.box::before{
+  width: 0;
+  height: 0;
+  border-right: 4em solid transparent;
+  border-bottom: 4em solid transparent;
+  border-left: 4em solid #C6E6FB;
+}
+.box::after{
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-right: 4em solid #C6E6FB;
+  border-top: 4em solid transparent;
+  border-left: 4em solid transparent;
+  right: 0;
+  bottom: 0;
+}
+	</style>
+	
+	
+</body>
+</html>
